@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main.xml"
+    app:startDestination="@id/raitingFragment">
+
+    <fragment
+        android:id="@+id/raitingFragment"
+        android:name="cf.homeit.raeted.Fragmnts.RaitingFragment"
+        android:label="RaitingFragment"
+        tools:layout="@layout/rating_fragment">
+        <action
+            android:id="@+id/action_raitingFragment_to_unlockAppFragment"
+            app:destination="@id/unlockAppFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unlockAppFragment"
+        android:name="cf.homeit.raeted.Fragmnts.UnlockAppFragment"
+        android:label="UnlockAppFragment"
+        tools:layout="@layout/unlock_fragment">
+        <action
+            android:id="@+id/action_unlockAppFragment_to_viewRatingFragment"
+            app:destination="@id/viewRatingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewRatingFragment"
+        android:name="cf.homeit.raeted.Fragmnts.ViewRatingFragment"
+        android:label="ViewRatingFragment"
+        tools:layout="@layout/view_rating_fragment"/>
+</navigation>

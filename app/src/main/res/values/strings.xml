@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Raeted</string>
+    <string name="rate_title_text">Пожалуйста оцените обслуживание!</string>
+    <string name="title_nice">Превосходно</string>
+    <string name="title_good">Хорошо</string>
+    <string name="title_bad">Плохо</string>
+    <string name="thanks_title">Спасибо за оценку!</string>
+</resources>
