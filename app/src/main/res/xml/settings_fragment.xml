@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Настройки безопасности">
+        <EditTextPreference
+            android:key="@string/name_pin_length_preference"
+            android:title="Длинна пинкода"
+            android:summary="измените длинну пинкода"
+            android:dialogTitle="Внимание длинна пинкода от 4 до 6 символов" />
+
+        <EditTextPreference
+            android:key="@string/name_pin_preference"
+            android:title="@string/pin_pref_title"
+            android:summary="@string/summary_edittext_preference"
+            android:dialogTitle="Внимание восстановления пинкода не возможно." />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pg_title">
+        <ListPreference
+            android:key="time_preference"
+            android:title="@string/title_list_preference"
+            android:dialogTitle="@string/dialog_title_list_preference"
+            android:entries="@array/entries_list_preference"
+            android:entryValues="@array/entryvalues_list_preference" />
+    </PreferenceCategory>
+</PreferenceScreen>

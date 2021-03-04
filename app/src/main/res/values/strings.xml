@@ -1,8 +1,22 @@
 <resources>
-    <string name="app_name">Raeted</string>
+    <string name="app_name">Рейтинг</string>
     <string name="rate_title_text">Пожалуйста оцените обслуживание!</string>
     <string name="title_nice">Превосходно</string>
     <string name="title_good">Хорошо</string>
     <string name="title_bad">Плохо</string>
     <string name="thanks_title">Спасибо за оценку!</string>
+    <string name="avg3h">Средняя оценка за все время!</string>
+    <string name="wrong_password" type="id">Не верный пинкод!</string>
+    <string name="pin_pref_title">ПИН-код доступа к статистики оценок</string>
+    <string name="summary_edittext_preference">Введите пинкод</string>
+    <string name="title_list_preference">Время показа сообщени \"Спасибо\"</string>
+    <string name="pg_title">Настройка времени показа диалога Спасибо</string>
+    <string name="dialog_title_list_preference">Вы дествительно хотите поменять?</string>
+    <string name="name_ime_preference">time_preference</string>
+    <string name="name_pin_preference">pin_preference</string>
+    <string name="name_pin_length_preference">pin_length_preference</string>
+    <string name="default_time_value">20000</string>
+    <string name="default_pass">0000</string>
+    <string name="default_pass_length">4</string>
+
 </resources>

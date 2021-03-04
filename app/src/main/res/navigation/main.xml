@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_raitingFragment_to_unlockAppFragment"
             app:destination="@id/unlockAppFragment" />
+        <action
+            android:id="@+id/action_raitingFragment_to_rateSuccess"
+            app:destination="@id/rateSuccess" />
     </fragment>
     <fragment
         android:id="@+id/unlockAppFragment"
@@ -27,5 +30,19 @@
         android:id="@+id/viewRatingFragment"
         android:name="cf.homeit.raeted.Fragmnts.ViewRatingFragment"
         android:label="ViewRatingFragment"
-        tools:layout="@layout/view_rating_fragment"/>
+        tools:layout="@layout/view_rating_fragment">
+        <action
+            android:id="@+id/action_viewRatingFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rateSuccess"
+        android:name="cf.homeit.raeted.Fragmnts.RateSuccess"
+        android:label="RateSuccess"
+        tools:layout="@layout/thank_fragment"/>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="cf.homeit.raeted.Fragmnts.SettingsFragment"
+        android:label="SettingsFragment" />
+
 </navigation>
