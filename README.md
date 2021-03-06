@@ -30,3 +30,34 @@
 - [com.hanks:passcodeview:0.1.2](https://github.com/hanks-zyh/PasscodeView) - An Passcode view view for Android.
 - [com.jjoe64:graphview:4.2.2](https://github.com/jjoe64/GraphView) - Chart and Graph Library for Android.
 
+#Rating
+
+## _Requirements_
+
+1. You need to add logic for checking the first installation.
+2. It is necessary to implement the "Configuration Wizard".
+3. The creation of the Database should be completed during the setup wizard or after the first launch.
+4. No selection by database according to DataPickerDialog
+  > (Necessary to implement)
+5. Used a third-party library for LockScreen.
+  > (Implement custom LockManager method)
+6. Use PIN and FingerPrint.
+7. It is necessary to implement the output of graphs.
+
+## _Completed_
+
+1. Service Assessment Process.
+2. Working fragments of the evaluation, settings, the message "Thank you" after the evaluation
+3. Used standard AVG method (Column)
+4. Use [Navigation] for navigation.
+5. For a fragment of use, [Preference] is used
+
+## _Recommendations_
+1. It is recommended to use FirebaseAnalica.
+2. It is recommended to implement accounting by cashiers or cash desks.
+3. It is recommended to use centralized data collection.
+4. It is recommended to use ClientServer energy.
+5. It is recommended to use a Decentralized Database.
+
+- [com.hanks: passcodeview: 0.1.2] (https://github.com/hanks-zyh/PasscodeView) - Android passcode view view.
+- [com.jjoe64: graphview: 4.2.2] (https://github.com/jjoe64/GraphView) - Charts and graphs library for Android.
