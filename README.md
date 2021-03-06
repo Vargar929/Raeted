@@ -27,10 +27,10 @@
 4. Рекомендуется использовать КлиентСерверную архитектуру.
 5. Рекомендуется использовать Децентрализованную Базу Данных.
 
-- [com.hanks:passcodeview:0.1.2](https://github.com/hanks-zyh/PasscodeView) - An Passcode view view for Android.
-- [com.jjoe64:graphview:4.2.2](https://github.com/jjoe64/GraphView) - Chart and Graph Library for Android.
+- [com.hanks:passcodeview:0.1.2](https://github.com/hanks-zyh/PasscodeView) - Представление кода доступа для Android.
+- [com.jjoe64:graphview:4.2.2](https://github.com/jjoe64/GraphView) - Библиотека диаграмм и графиков для Android.
 
-#Rating
+# Rating
 
 ## _Requirements_
 
@@ -59,5 +59,5 @@
 4. It is recommended to use ClientServer energy.
 5. It is recommended to use a Decentralized Database.
 
-- [com.hanks: passcodeview: 0.1.2] (https://github.com/hanks-zyh/PasscodeView) - Android passcode view view.
-- [com.jjoe64: graphview: 4.2.2] (https://github.com/jjoe64/GraphView) - Charts and graphs library for Android.
+- [com.hanks:passcodeview:0.1.2](https://github.com/hanks-zyh/PasscodeView) - An Passcode view view for Android.
+- [com.jjoe64:graphview:4.2.2](https://github.com/jjoe64/GraphView) - Chart and Graph Library for Android.
