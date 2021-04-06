@@ -56,7 +56,6 @@ public class RateSuccess extends Fragment {
                 }
                 //Задаем действия после завершения отсчета (высвечиваем надпись "Бабах!"):
                 public void onFinish() {
-                    getActivity().onBackPressed();
                     NavController navController;
                     navController = Navigation.findNavController(requireActivity(), R.id.first_nav_host);
                     navController.navigate(R.id.raitingFragment);

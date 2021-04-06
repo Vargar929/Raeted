@@ -35,7 +35,7 @@
             android:layout_width="128dp"
             android:layout_height="128dp"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/ic_disgusting"
+            app:srcCompat="@drawable/bad"
             tools:ignore="VectorDrawableCompat" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -67,7 +67,7 @@
             android:layout_width="128dp"
             android:layout_height="128dp"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/ic_well"
+            app:srcCompat="@drawable/so"
             tools:ignore="VectorDrawableCompat" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -100,7 +100,7 @@
             android:layout_width="128dp"
             android:layout_height="128dp"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/ic_perfectly"
+            app:srcCompat="@drawable/good"
             tools:ignore="VectorDrawableCompat" />
 
         <com.google.android.material.textview.MaterialTextView
