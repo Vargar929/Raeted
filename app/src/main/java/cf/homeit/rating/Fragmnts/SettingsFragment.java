@@ -29,9 +29,9 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
         onSharedPreferenceChanged(sharedPreferences, getString(R.string.name_pin_preference));
         onSharedPreferenceChanged(sharedPreferences, getString(R.string.name_pin_length_preference));
 
-        Preference myEasterEgg = findPreference(getString(R.string.app_version));
-        assert myEasterEgg != null;
-        myEasterEgg.setSummary(BuildConfig.VERSION_NAME);
+        Preference version = findPreference(getString(R.string.key_app_version));
+        assert version != null;
+        version.setSummary(BuildConfig.VERSION_NAME);
     }
 
     @Override
