@@ -1,8 +1,8 @@
-package cf.homeit.raeted.Fragmnts;
+package cf.homeit.rating.Fragmnts;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.LayoutInflater;
@@ -18,7 +18,9 @@ import androidx.preference.PreferenceManager;
 
 import com.google.android.material.textview.MaterialTextView;
 
-import cf.homeit.raeted.R;
+import cf.homeit.rating.R;
+
+import static cf.homeit.rating.Extends.SupportVoids.onRotateScreen;
 
 public class RateSuccess extends Fragment {
     private MaterialTextView timerCounter;
@@ -37,11 +39,12 @@ public class RateSuccess extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        Context context = requireActivity().getApplicationContext();
+        onRotateScreen(getActivity(),"landscape");
 
         View view = inflater.inflate(R.layout.thank_fragment, container, false);
         timerCounter = view.findViewById(R.id.countTimer);
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         String time=sharedPreferences.getString(getString(R.string.name_ime_preference),getString(R.string.default_time_value));
         Long timeL= Long.parseLong(time);
         //Создаем таймер обратного отсчета на 20 секунд с шагом отсчета
@@ -57,7 +60,7 @@ public class RateSuccess extends Fragment {
                 //Задаем действия после завершения отсчета (высвечиваем надпись "Бабах!"):
                 public void onFinish() {
                     NavController navController;
-                    navController = Navigation.findNavController(requireActivity(), R.id.first_nav_host);
+                    navController = Navigation.findNavController(requireActivity(), R.id.main_container);
                     navController.navigate(R.id.raitingFragment);
                 }
             }

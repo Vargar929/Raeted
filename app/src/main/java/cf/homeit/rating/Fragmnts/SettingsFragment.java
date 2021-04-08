@@ -1,34 +1,37 @@
-package cf.homeit.raeted.Fragmnts;
+package cf.homeit.rating.Fragmnts;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
-import cf.homeit.raeted.R;
+import cf.homeit.rating.BuildConfig;
+import cf.homeit.rating.R;
+
+import static cf.homeit.rating.Extends.SupportVoids.onRotateScreen;
 
 public class SettingsFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener {
-    private static final String TAG = SettingsFragment.class.getSimpleName();
 
-    private ListPreference mListPreference;
     SharedPreferences sharedPreferences;
+
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
         addPreferencesFromResource(R.xml.settings_fragment);
-//        setPreferencesFromResource(R.xml.settings_fragment);
+        onRotateScreen(getActivity(),"portrait");
 
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireActivity());
 
         onSharedPreferenceChanged(sharedPreferences, getString(R.string.name_ime_preference));
         onSharedPreferenceChanged(sharedPreferences, getString(R.string.name_pin_preference));
         onSharedPreferenceChanged(sharedPreferences, getString(R.string.name_pin_length_preference));
+
+        Preference myEasterEgg = findPreference(getString(R.string.app_version));
+        assert myEasterEgg != null;
+        myEasterEgg.setSummary(BuildConfig.VERSION_NAME);
     }
 
     @Override
@@ -48,7 +51,9 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
                 preference.setSummary(listPreference.getEntries()[prefIndex]);
             }
         } else {
-            preference.setSummary(sharedPreferences.getString(key, ""));
+            if (preference != null) {
+                preference.setSummary(sharedPreferences.getString(key, ""));
+            }
 
         }
     }

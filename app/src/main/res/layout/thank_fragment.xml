@@ -9,7 +9,7 @@
         android:id="@+id/materialTextView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/mariage_ant_d"
+        android:fontFamily="@font/abeezee"
         android:text="@string/thanks_title"
         android:textSize="48sp"
         android:textStyle="bold"
@@ -27,9 +27,8 @@
         app:layout_constraintStart_toStartOf="parent"
         android:textColor="@color/red_700"
         android:textStyle="bold"
-        android:fontFamily="@font/mariage_ant_d"
+        android:fontFamily="@font/abeezee"
         android:textSize="48sp"
-        android:text="30 секунд"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

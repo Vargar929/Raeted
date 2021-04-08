@@ -1,13 +1,13 @@
-package cf.homeit.raeted;
+package cf.homeit.rating;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import cf.homeit.raeted.Activity.AppraisalsActivity;
+import cf.homeit.rating.Activity.ContainerActivity;
+
+import static cf.homeit.rating.Extends.SupportVoids.onRotateScreen;
 
 public class LauncherActivity extends AppCompatActivity {
 
@@ -15,11 +15,9 @@ public class LauncherActivity extends AppCompatActivity {
         public void onCreate( Bundle savedInstanceState ) {
             setTheme(R.style.AppTheme_Launcher);
             super.onCreate( savedInstanceState );
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
+            onRotateScreen(this,"landscape");
             finish();
-            startActivity(new Intent(getApplicationContext(), AppraisalsActivity.class)
+            startActivity(new Intent(getApplicationContext(), ContainerActivity.class)
                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP));
         }
 }

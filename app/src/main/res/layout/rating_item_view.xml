@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="66dp"
-        android:background="@android:color/darker_gray"
+        android:background="@color/transperent_grey"
         android:orientation="horizontal"
         android:padding="12dp">
 
@@ -20,15 +20,15 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/contact_name"
+                android:id="@+id/date_label"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_weight="4"
-                android:text="Дата оценки:"
+                android:text="@string/vote_date"
                 android:textColor="@color/black"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 card_view:layout_constraintStart_toStartOf="parent"
                 card_view:layout_constraintTop_toTopOf="parent" />
@@ -39,12 +39,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_weight="4"
-                android:text="Оценка:"
+                android:text="@string/vote"
                 android:textColor="@color/black"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 card_view:layout_constraintStart_toStartOf="parent"
-                card_view:layout_constraintTop_toBottomOf="@+id/contact_name" />
+                card_view:layout_constraintTop_toBottomOf="@+id/date_label" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/date_result"
@@ -55,10 +55,10 @@
                 android:layout_weight="4"
                 android:text="01.03.2021 06:08:22"
                 android:textColor="@color/black"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 card_view:layout_constraintEnd_toEndOf="parent"
-                card_view:layout_constraintStart_toEndOf="@+id/contact_name"
+                card_view:layout_constraintStart_toEndOf="@+id/date_label"
                 card_view:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -68,9 +68,8 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="1dp"
                 android:layout_weight="4"
-                android:text="Прекрасно"
                 android:textColor="@color/black"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 card_view:layout_constraintEnd_toEndOf="parent"
                 card_view:layout_constraintStart_toEndOf="@+id/ph_no"

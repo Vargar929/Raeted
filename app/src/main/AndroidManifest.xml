@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cf.homeit.raeted">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cf.homeit.rating">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name="cf.homeit.rating.RatingApplication"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:label="@string/app_name"
-            android:name=".LauncherActivity"
+            android:name="cf.homeit.rating.LauncherActivity"
             android:theme="@style/AppTheme.Launcher"
             android:launchMode="singleTop">
             <intent-filter>
@@ -19,6 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.AppraisalsActivity"/>
+        <activity android:name="cf.homeit.rating.Activity.ContainerActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 </manifest>

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/raitingFragment"
-        android:name="cf.homeit.raeted.Fragmnts.RaitingFragment"
+        android:name="cf.homeit.rating.Fragmnts.RaitingFragment"
         android:label="RaitingFragment"
         tools:layout="@layout/rating_fragment">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/unlockAppFragment"
-        android:name="cf.homeit.raeted.Fragmnts.UnlockAppFragment"
+        android:name="cf.homeit.rating.Fragmnts.UnlockAppFragment"
         android:label="UnlockAppFragment"
         tools:layout="@layout/unlock_fragment">
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewRatingFragment"
-        android:name="cf.homeit.raeted.Fragmnts.ViewRatingFragment"
+        android:name="cf.homeit.rating.Fragmnts.ViewRatingFragment"
         android:label="ViewRatingFragment"
         tools:layout="@layout/view_rating_fragment">
         <action
@@ -37,12 +37,17 @@
     </fragment>
     <fragment
         android:id="@+id/rateSuccess"
-        android:name="cf.homeit.raeted.Fragmnts.RateSuccess"
+        android:name="cf.homeit.rating.Fragmnts.RateSuccess"
         android:label="RateSuccess"
         tools:layout="@layout/thank_fragment"/>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="cf.homeit.raeted.Fragmnts.SettingsFragment"
+        android:name="cf.homeit.rating.Fragmnts.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/setupFragment"
+        android:name="cf.homeit.rating.Fragmnts.SetupFragment"
+        android:label="SetupFragment"
+        tools:layout="@layout/fragment_setup"/>
 
 </navigation>
