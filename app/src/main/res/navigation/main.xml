@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/raitingFragment"
-        android:name="cf.homeit.rating.Fragmnts.RaitingFragment"
+        android:name="cf.homeit.rating.Fragmnts.RatingFragment"
         android:label="RaitingFragment"
         tools:layout="@layout/rating_fragment">
         <action
@@ -49,5 +49,9 @@
         android:name="cf.homeit.rating.Fragmnts.SetupFragment"
         android:label="SetupFragment"
         tools:layout="@layout/fragment_setup"/>
+    <fragment
+        android:id="@+id/analitycsFragment"
+        android:name="cf.homeit.rating.Fragmnts.AnalyticsFragment"
+        android:label="AnalitycsFragment" />
 
 </navigation>

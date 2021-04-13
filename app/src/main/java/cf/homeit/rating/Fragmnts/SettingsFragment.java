@@ -25,9 +25,9 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireActivity());
 
-        onSharedPreferenceChanged(sharedPreferences, getString(R.string.name_ime_preference));
-        onSharedPreferenceChanged(sharedPreferences, getString(R.string.name_pin_preference));
-        onSharedPreferenceChanged(sharedPreferences, getString(R.string.name_pin_length_preference));
+        onSharedPreferenceChanged(sharedPreferences, getString(R.string.key_time_preference));
+        onSharedPreferenceChanged(sharedPreferences, getString(R.string.key_pin_preference));
+        onSharedPreferenceChanged(sharedPreferences, getString(R.string.key_pin_length_preference));
 
         Preference version = findPreference(getString(R.string.key_app_version));
         assert version != null;

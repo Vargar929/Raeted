@@ -53,12 +53,12 @@ public class SetupFragment extends Fragment{
         Context spContext = requireActivity();
         Resources res = getResources();
         @SuppressLint("Recycle") final TypedArray selectedValues = res
-                .obtainTypedArray(R.array.entryvalues_list_preference);
+                .obtainTypedArray(R.array.msg_time_values_list_preference);
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
-                //Get the selected value
                 selectedValue = selectedValues.getInt(position, -1);
             }
 
@@ -68,6 +68,7 @@ public class SetupFragment extends Fragment{
 
             }
         });
+
 
         setupComplete.setOnClickListener(v -> {
 //            new DBHelper(requireActivity().getApplicationContext());
@@ -84,9 +85,9 @@ public class SetupFragment extends Fragment{
             }
 
             selectedValueStr = String.valueOf(selectedValue);
-            SupportVoids.setStringPref(spContext,getString(R.string.name_pin_length_preference), pinLengthStr);
-            SupportVoids.setStringPref(spContext,getString(R.string.name_pin_preference), pinStr);
-            SupportVoids.setStringPref(spContext,getString(R.string.name_ime_preference),selectedValueStr);
+            SupportVoids.setStringPref(spContext,getString(R.string.key_pin_length_preference), pinLengthStr);
+            SupportVoids.setStringPref(spContext,getString(R.string.key_pin_preference), pinStr);
+            SupportVoids.setStringPref(spContext,getString(R.string.key_time_preference),selectedValueStr);
 
             requireActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
             requireActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);

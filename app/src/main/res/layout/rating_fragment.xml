@@ -24,7 +24,7 @@
         android:clickable="true"
         android:focusable="true"
         android:layout_width="192dp"
-        android:layout_height="192dp"
+        android:layout_height="200dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,10 +36,11 @@
             android:layout_height="128dp"
             android:layout_gravity="center"
             app:srcCompat="@drawable/bad"
+            android:paddingBottom="8dp"
             tools:ignore="VectorDrawableCompat" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:layout_width="128dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
             android:layout_marginBottom="8dp"
@@ -57,7 +58,7 @@
         android:clickable="true"
         android:focusable="true"
         android:layout_width="192dp"
-        android:layout_height="192dp"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cv_nice"
         app:layout_constraintStart_toEndOf="@+id/cv_bad"
@@ -71,7 +72,7 @@
             tools:ignore="VectorDrawableCompat" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:layout_width="128dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
             android:layout_marginBottom="8dp"
@@ -89,7 +90,7 @@
         android:clickable="true"
         android:focusable="true"
         android:layout_width="192dp"
-        android:layout_height="192dp"
+        android:layout_height="200dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -104,7 +105,7 @@
             tools:ignore="VectorDrawableCompat" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:layout_width="128dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
             android:layout_marginBottom="8dp"

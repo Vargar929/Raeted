@@ -3,9 +3,12 @@ package cf.homeit.rating.Extends;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
+import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.format.DateUtils;
@@ -14,17 +17,33 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.preference.PreferenceManager;
+
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.LegendRenderer;
+import com.jjoe64.graphview.series.BarGraphSeries;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
+
+import cf.homeit.rating.R;
 import es.dmoral.toasty.Toasty;
 import static android.graphics.Typeface.BOLD_ITALIC;
 
 
 public class SupportVoids {
+
     private static SharedPreferences sharedPreferences;
+    public static final Boolean debugMode = false;
 
     /**
      *
@@ -32,20 +51,22 @@ public class SupportVoids {
      * @param message Message to display
      */
     public static void showToast(Context context, String message,String type) {
-        if(type.equals("")){
-            type = "i";
-        }
-        switch (type){
+        switch (type) {
             case "e":
                 Toasty.error(context, message, Toast.LENGTH_SHORT, true).show();
+                break;
             case "s":
                 Toasty.success(context, message, Toast.LENGTH_SHORT, true).show();
+                break;
             case "i":
                 Toasty.info(context, message, Toast.LENGTH_SHORT, true).show();
+                break;
             case "w":
                 Toasty.warning(context, message, Toast.LENGTH_SHORT, true).show();
-            case "n":
+                break;
+            default:
                 Toasty.normal(context, message, Toast.LENGTH_SHORT).show();
+                break;
         }
     }
 
@@ -55,7 +76,7 @@ public class SupportVoids {
      */
 
     public static String getTime() {
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat format = new SimpleDateFormat("MM-dd-yy HH:mm:ss");
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat format = new SimpleDateFormat("ddMyyyy HH:mm:ss");
         Date curDate = new Date();
         return format.format(curDate);
     }
@@ -162,6 +183,57 @@ public class SupportVoids {
                 prefixLen, prefixLen + highlight.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         return ssb;
     }
+
+    public static Locale getLocale(Context context,String key,String defValue){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+
+        String lang = sharedPreferences.getString(key, defValue);
+
+        switch (lang) {
+            case "ru":
+                lang = "ru";
+                break;
+            case "kk":
+                lang = "kk";
+                break;
+            case "en":
+                lang = "en";
+                break;
+            case "hi":
+                lang = "hi";
+                break;
+        }
+        return new Locale(lang);
+    }
+
+    /**
+     *
+     * @param activity Activity
+     * @param viewID int R.id.container
+     * @param resID int R.id.Navigation_Item
+     */
+    public static void onNavigateTo(Activity activity,   int viewID, int resID){
+        NavController navController;
+        navController = Navigation.findNavController(activity, viewID);
+        navController.navigate(resID);
+    }
+
+    /**
+     *
+     * @param graphView GraphView
+     * @param series BarGraphSeries<DataPoint>
+     * @param legendText String
+     * @param align LegendRenderer.LegendAlign
+     */
+    public static void drawLegend(GraphView graphView, BarGraphSeries<DataPoint> series, String legendText, LegendRenderer.LegendAlign align){
+        series.setTitle(legendText);
+        graphView.getLegendRenderer().setBackgroundColor(Color.TRANSPARENT);
+        graphView.getLegendRenderer().setVisible(true);
+        graphView.getLegendRenderer().setAlign(align);
+
+    }
+
+
 
 
 }

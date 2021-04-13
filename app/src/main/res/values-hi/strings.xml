@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name = "app_name"> रेटिंग </string>
+    <string name = "rate_title_text"> कृपया सेवा को रेट करें! </string>
+    <string name = "title_nice"> उत्कृष्ट </string>
+    <string name = "title_good"> अच्छा </string>
+    <string name = "title_bad"> खराब </string>
+    <string name = "thanks_title"> रेटिंग के लिए धन्यवाद! </string>
+    <string name = "avg3h"> हर समय औसत रेटिंग! </string>
+    <string name = "wrong_password" type = "id"> गलत पिनकोड! </string>
+    <string name = "pin_pref_title"> ग्रेड आँकड़ों तक पहुँच के लिए पिन </string>
+    <string name = "summary_edittext_preference"> पिनकोड दर्ज करें </string>
+    <string name = "title_list_preference"> संदेश प्रदर्शन समय \ "धन्यवाद \" </string>
+    <string name = "pg_title"> थैंक्यू डायलॉग दिखाने का समय निर्धारित करना </string>
+    <string name = "dialog_title_list_preference"> क्या आप वाकई इस सेटिंग को बदलना चाहते हैं? </string>
+
+    <string name = "vote_date"> मूल्यांकन दिनांक: </string>
+    <string name = "vote"> रेटिंग: </string>
+    <string name = "rate_error_text"> ध्यान देने की त्रुटि! </string>
+    <string name = "attention_pin"> ध्यान पिनकोड रिकवरी संभव नहीं है। </string>
+    <string name = "lenght_pin"> पिनकोड लंबाई </string>
+    <string name = "change_length_pin"> पिन लंबाई बदलें </string>
+    <string name = "description_length_pin"> ध्यान पिनकोड लंबाई 4 से 6 अक्षर </string> है
+    <string name = "save_first_preference"> सहेजें </string>
+    <string name = "required"> पैरामीटर्स को भरना होगा !!! </string>
+    <string name = "avg_error"> औसत मूल्य प्रदर्शित करना संभव नहीं है। डेटाबेस में कोई रिकॉर्ड नहीं है! </string>
+    <string name = "delete"> Delete </string>
+    <string name = "pref_header_about"> ऐप के बारे में </string>
+    <string name = "summary_about"> इस ऐप को चेकआउट में डेमो ऐप के रूप में रेट किया गया है। </string>
+
+    <string name = "title_version"> संस्करण </string>
+    <string name = "privacy_policy"> गोपनीयता नीति </string>
+    <string name = "title_terms"> नियम और शर्तें </string>
+    <string name = "null_cursor"> कर्सर शून्य है </string>
+    <string name = "count_label"> "शेष:" </string>
+    <string name = "sec"> "sec।" </string>
+    <string name = "on_complete_message"> प्रतिबद्ध पूर्ण </string>
+    <string name = "on_in_complete_message"> अमान्य पिन </string>
+    <string name="welcome">स्वागत हे</string>
+    <string name="lang_title">एप्लिकेशन भाषा सेट करना</string>
+    <string name="app_language">अनुप्रयोग भाषा</string>
+</resources>

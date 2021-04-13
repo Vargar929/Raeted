@@ -4,13 +4,13 @@
     <PreferenceCategory
         android:title="Настройки безопасности">
         <EditTextPreference
-            android:key="@string/name_pin_length_preference"
+            android:key="@string/key_pin_length_preference"
             android:title="@string/lenght_pin"
             android:summary="@string/change_length_pin"
             android:dialogTitle="@string/description_length_pin" />
 
         <EditTextPreference
-            android:key="@string/name_pin_preference"
+            android:key="@string/key_pin_preference"
             android:title="@string/pin_pref_title"
             android:summary="@string/summary_edittext_preference"
             android:dialogTitle="@string/attention_pin" />
@@ -23,9 +23,10 @@
             android:key="@string/key_time_preference"
             android:title="@string/title_list_preference"
             android:dialogTitle="@string/dialog_title_list_preference"
-            android:entries="@array/entries_list_preference"
-            android:entryValues="@array/entryvalues_list_preference" />
+            android:entries="@array/msg_time_list_preference"
+            android:entryValues="@array/msg_time_values_list_preference" />
     </PreferenceCategory>
+
     <PreferenceCategory
         android:title="@string/pref_header_about">
 

@@ -1,16 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="key_time_preference" translatable="false">time_preference</string>
-    <string name="key_pin_preference" translatable="false">pin_preference</string>
-    <string name="key_lang_preference" translatable="false">lang_preference</string>
-    <string name="key_pin_length_preference" translatable="false">pin_length_preference</string>
-    <string name="key_app_version" translatable="false">key_app_version</string>
-    <string name="default_time_value" translatable="false">20000</string>
-    <string name="default_pass" translatable="false">0000</string>
-    <string name="default_pass_length" translatable="false">4</string>
-    <string name="app_version" translatable="false">1.3</string>
-    <string name="url_privacy" translatable="false">https://www.androidhive.info/privacy-policy/</string>
-    <string name="url_terms" translatable="false">https://www.androidhive.info/terms-of-service/</string>
-
     <string name = "app_name"> Rating </string>
     <string name = "rate_title_text"> Please rate the service! </string>
     <string name = "title_nice"> Excellent </string>
@@ -50,31 +39,4 @@
     <string name="welcome">Welcome</string>
     <string name="lang_title">Setting the application language</string>
     <string name="app_language">Application language</string>
-    <string-array name="msg_time_list_preference">
-        <item>5 sec</item>
-        <item>10 sec</item>
-        <item>15 sec</item>
-        <item>20 sec</item>
-        <item>30 sec</item>
-    </string-array>
-    <string-array name="msg_time_values_list_preference" >
-        <item>5000</item>
-        <item>10000</item>
-        <item>15000</item>
-        <item>20000</item>
-        <item>30000</item>
-    </string-array>
-    <string-array name="lang_list_preference">
-        <item>Русский</item>
-        <item>Қазақ</item>
-        <item>English</item>
-        <item>हिंदी</item>
-    </string-array>
-    <string-array name="lang_values_list_preference" >
-        <item>ru</item>
-        <item>kk</item>
-        <item>en</item>
-        <item>hi</item>
-    </string-array>
-
 </resources>

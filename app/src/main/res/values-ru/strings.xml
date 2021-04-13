@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Рейтинг</string>
+    <string name="rate_title_text">Пожалуйста оцените обслуживание!</string>
+    <string name="title_nice">Превосходно</string>
+    <string name="title_good">Хорошо</string>
+    <string name="title_bad">Плохо</string>
+    <string name="thanks_title">Спасибо за оценку!</string>
+    <string name="avg3h">Средняя оценка за все время!</string>
+    <string name="wrong_password" type="id">Не верный пинкод!</string>
+    <string name="pin_pref_title">ПИН-код доступа к статистике оценок</string>
+    <string name="summary_edittext_preference">Введите пинкод</string>
+    <string name="title_list_preference">Время показа сообщения \"Спасибо\"</string>
+    <string name="pg_title">Настройка времени показа диалога Спасибо</string>
+    <string name="dialog_title_list_preference">Вы дествительно хотите изменить данный параметр?</string>
+
+    <string name="vote_date">Дата оценки:</string>
+    <string name="vote">Оценка:</string>
+    <string name="rate_error_text">Внимание ошибка!</string>
+    <string name="attention_pin">Внимание восстановления пинкода не возможно.</string>
+    <string name="lenght_pin">Длина пинкода</string>
+    <string name="change_length_pin">Измените длинну пинкода</string>
+    <string name="description_length_pin">Внимание длинна пинкода от 4 до 6 символов</string>
+    <string name="save_first_preference">Сохранить</string>
+    <string name="required">Параметры должны быть заполнены!!!</string>
+    <string name="avg_error">Не возможно вывести среднее значение. Отсутсвуют записи в базе!</string>
+    <string name="delete">Удалить</string>
+    <string name="pref_header_about">О приложении</string>
+    <string name="summary_about">Это приложение имеет рейтинг демонстрационного приложения при оформлении заказа.</string>
+
+    <string name="title_version">Версия</string>
+    <string name="privacy_policy">Политика конфиденциальности</string>
+    <string name="title_terms">Прравила &amp; Условия</string>
+    <string name="null_cursor">Курсор равен нулю</string>
+    <string name="count_label">"Осталось: "</string>
+    <string name="sec">" сек."</string>
+    <string name = "on_complete_message"> Закрепить завершено </string>
+    <string name = "on_in_complete_message"> Недействительный пин-код </string>
+    <string name="welcome">Добро пожаловать</string>
+    <string name="lang_title">Настройка языка приложения</string>
+    <string name="app_language">Язык приложения</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name = "app_name"> Рейтинг </string>
+    <string name = "rate_title_text"> Қызметті бағалаңыз! </string>
+    <string name = "title_nice"> Өте жақсы </string>
+    <string name = "title_good"> Жақсы </string>
+    <string name = "title_bad"> Жаман </string>
+    <string name = "thanks_title"> Бағалағаныңызға рахмет! </string>
+    <string name = "avg3h"> Орташа рейтинг барлық уақытта! </string>
+    <string name = "wrong_password" type = "id"> Пинкод дұрыс емес! </string>
+    <string name = "pin_pref_title"> Баға статистикасына қол жеткізу үшін PIN коды </string>
+    <string name = "summary_edittext_preference"> Пинкодты енгізу </string>
+    <string name = "title_list_preference"> Хабардың көрсетілетін уақыты \ "Рахмет \" </string>
+    <string name = "pg_title"> Рахмет диалогын көрсету уақытын белгілеу </string>
+    <string name = "dialog_title_list_preference"> Бұл параметрді шынымен өзгерткіңіз келе ме? </string>
+
+    <string name = "vote_date"> Бағалау күні: </string>
+    <string name = "vote"> Бағалау: </string>
+    <string name = "rate_error_text"> Назар аударыңыз! </string>
+    <string name = "attention_pin"> Пинкодты қалпына келтіру мүмкін емес. </string>
+    <string name = "lenght_pin"> Пинкодтың ұзындығы </string>
+    <string name = "change_length_pin"> Ұзындықтың ұзындығын өзгерту </string>
+    <string name = "description_length_pin"> Пинкодтың ұзындығы 4-тен 6 таңбаға дейін </string>
+    <string name = "save_first_preference"> Сақтау </string>
+    <string name = "required"> Параметрлер толтырылуы керек !!! </string>
+    <string name = "avg_error"> Орташа мәнді көрсету мүмкін емес. Деректер базасында жазбалар жоқ! </string>
+    <string name = "delete"> Жою </string>
+    <string name = "pref_header_about"> Қолданба туралы </string>
+    <string name = "summary_about"> Бұл қолданба төлем кезінде демо-бағдарлама ретінде бағаланады. </string>
+
+    <string name = "title_version"> Нұсқа </string>
+    <string name = "privacy_policy"> Құпиялылық саясаты </string>
+    <string name = "title_terms"> Шарттар </string>
+    <string name = "null_cursor"> меңзер нөлге тең </string>
+    <string name = "count_label"> "Қалған:" </string>
+    <string name = "sec"> "сек." </string>
+    <string name = "on_complete_message"> Аяқталды </string>
+    <string name = "on_in_complete_message"> Жарамсыз PIN коды </string>
+    <string name="welcome">Қош келдіңіз</string>
+    <string name="lang_title">Қолданба тілін орнату</string>
+    <string name="app_language">Қолдану тілі</string>
+</resources>

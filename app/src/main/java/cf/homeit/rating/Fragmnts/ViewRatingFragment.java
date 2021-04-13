@@ -1,25 +1,19 @@
 package cf.homeit.rating.Fragmnts;
 
 import android.annotation.SuppressLint;
-import android.app.DatePickerDialog;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.text.format.DateUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.DatePicker;
+import android.widget.Button;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,29 +21,25 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textview.MaterialTextView;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 import cf.homeit.rating.Adapters.RatingListAdapter;
 import cf.homeit.rating.DataModel.RatingList;
-import cf.homeit.rating.Interfaces.IOnBackPressed;
 import cf.homeit.rating.R;
 import cf.homeit.rating.SQLiteHelper.DBHelper;
 
-import static cf.homeit.rating.Extends.SupportVoids.debugLog;
-import static cf.homeit.rating.Extends.SupportVoids.errorLog;
+import static cf.homeit.rating.Extends.SupportVoids.onNavigateTo;
 import static cf.homeit.rating.Extends.SupportVoids.onRotateScreen;
 import static cf.homeit.rating.Extends.SupportVoids.showToast;
 import static cf.homeit.rating.SQLiteHelper.DBHelper.COL2;
 import static cf.homeit.rating.SQLiteHelper.DBHelper.COL3;
-import static cf.homeit.rating.SQLiteHelper.DBHelper.TABLE_NAME;
 
 public class ViewRatingFragment extends Fragment{
-    private static final String TAG = "ViewRatingFragment";
     private MaterialTextView avgRating;
-    private String startDate, endDate, currentDateTime;
-    Calendar dateAndTime=Calendar.getInstance();
+//    private String startDate, endDate, currentDateTime;
+//    Calendar dateAndTime=Calendar.getInstance();
     DBHelper dbHelper;
     FloatingActionButton fab;
+    Button showAnalytics;
     RecyclerView mRecyclerView;
     RatingListAdapter readingListAdapter;
     ArrayList<RatingList> arrayList = new ArrayList<>();
@@ -60,9 +50,7 @@ public class ViewRatingFragment extends Fragment{
         OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
             @Override
             public void handleOnBackPressed() {
-                NavController navController;
-                navController = Navigation.findNavController(requireActivity(), R.id.main_container);
-                navController.navigate(R.id.raitingFragment);
+                onNavigateTo(requireActivity(),R.id.main_container,R.id.raitingFragment);
             }
         };
         requireActivity().getOnBackPressedDispatcher().addCallback(this, callback);
@@ -81,6 +69,7 @@ public class ViewRatingFragment extends Fragment{
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         fab = view.findViewById(R.id.fab);
+        showAnalytics = view.findViewById(R.id.showAnalytics);
         avgRating = view.findViewById(R.id.avgRating);
         mRecyclerView = view.findViewById(R.id.lvRating);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -91,18 +80,14 @@ public class ViewRatingFragment extends Fragment{
         cAverage.close();
 
         setmRecyclerView();
-        fab.setOnClickListener(v -> {
-            NavController navController;
-            navController = Navigation.findNavController(requireActivity(), R.id.main_container);
-            navController.navigate(R.id.settingsFragment);
-        });
-//        avgRating.setOnLongClickListener(v -> {
-//            Cursor cDateAverage = db.query(TABLE_NAME,new String[] {"AVG("+COL2+") AS "+COL2+"WHERE "+COL3+" BETWEEN LIKE "+startDate+"'%'"+" AND LIKE"+endDate+"'%"},
+        fab.setOnClickListener(v -> onNavigateTo(requireActivity(),R.id.main_container,R.id.settingsFragment));
+        showAnalytics.setOnClickListener(v -> {
+            //            Cursor cDateAverage = db.query(TABLE_NAME,new String[] {"AVG("+COL2+") AS "+COL2+"WHERE "+COL3+" BETWEEN LIKE "+startDate+"'%'"+" AND LIKE"+endDate+"'%"},
 //                    null, null, null, null, null);
 //            logCursor(cDateAverage);
 //            cDateAverage.close();
-//            return false;
-//        });
+            onNavigateTo(requireActivity(),R.id.main_container,R.id.analitycsFragment);
+        });
     }
 
     @SuppressLint("SetTextI18n")
@@ -123,12 +108,12 @@ public class ViewRatingFragment extends Fragment{
                     } while (c.moveToNext());
                 }catch (Exception e) {
                     e.printStackTrace();
+                    showToast(requireActivity().getApplicationContext(),e.toString(), "e");
                 }
 
             }
         } else{
             showToast(requireActivity(),getString(R.string.avg_error),"e");
-            Log.d(TAG, "Cursor is null");
             avgRating.setText("null");
         }
     }
